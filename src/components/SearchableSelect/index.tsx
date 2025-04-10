@@ -1,8 +1,9 @@
 "use client";
-import Select, { components } from "react-select";
+import { components } from "react-select";
+import dynamic from 'next/dynamic';
 
 import Icons from "@/Icons";
-import Icon from "../Icon";
+import Icon from "../Common/Icon";
 
 //css
 import { useTheme } from "styled-components";
@@ -15,6 +16,13 @@ const options = [
   { value: "grape", label: "Grape" },
 ];
 
+const SearchSelect = dynamic(() => import('react-select'), { ssr: false });
+
+/*
+  * CustomControl component
+  * @param {any} props - The props passed to the component.
+  * @returns {JSX.Element} - A custom control component for the select input.
+*/
 const CustomControl = (props: any) => (
   <components.Control {...props}>
     <span className="ml-3 mr-2">
@@ -24,6 +32,10 @@ const CustomControl = (props: any) => (
   </components.Control>
 );
 
+/*
+  * SearchableSelect component
+  * @returns {JSX.Element} - A searchable select component with custom styles and functionality.
+*/
 const SearchableSelect = () => {
   const theme = useTheme();
   const handleChange = (selectedOption: any) => {
@@ -31,7 +43,7 @@ const SearchableSelect = () => {
   };
 
   return (
-    <Select
+    <SearchSelect
       options={options}
       onChange={handleChange}
       placeholder="All Categories"

@@ -1,6 +1,11 @@
-import { text } from "stream/consumers";
-
-// styles/theme.ts
+/*
+  * lightTheme and darkTheme objects
+  * These objects define the light and dark themes for the application.
+  * Each theme contains color properties, font weights, and breakpoints.
+  * The colors object contains color properties for the theme.
+  * The fontWeights object contains font weight properties for the theme.
+  * The breakpoints object contains responsive design breakpoints for the theme.
+*/
 export const lightTheme = {
   colors: {
     primary: "#20AAFB",
@@ -20,7 +25,16 @@ export const lightTheme = {
     bold: 600,
     bolder: 700,
     strong: 900
-  }
+  },
+  breakpoints: {
+    vsm: '412px', //very small mobile
+    sm: "640px", //mobile
+    md: "768px", // tablet
+    lg: "1024px", //laptop
+    xl: "1280px", // desktop
+    xxl: "1440px", // medium desktop
+    xxxl: "2560px", // large desktop
+  },
 };
 
 export const darkTheme = {
@@ -40,7 +54,16 @@ export const darkTheme = {
     bold: 600,
     bolder: 700,
     strong: 900
-  }
+  },
+  breakpoints: {
+    vsm: '412px', //very small mobile
+    sm: "640px", //mobile
+    md: "768px", // tablet
+    lg: "1024px", //laptop
+    xl: "1280px", // desktop
+    xxl: "1440px", // medium desktop
+    xxxl: "2560px", // large desktop
+  },
 };
 
 export type ThemeType = typeof lightTheme;

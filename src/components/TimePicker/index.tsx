@@ -2,12 +2,16 @@
 import { useState } from "react";
 import Icons from "@/Icons";
 
-import StyledSelect from "../Select";
+import StyledSelect from "../Common/Select";
 
 //css
 import { TimePickerContainer, TimeSelectWrapper } from "./index.styles";
 import { CloseBtn, Modal, PickDateBtn } from "../DatePicker/index.styles";
 
+/*
+  * TimePicker component
+  * @returns {JSX.Element} - A time picker component that allows users to select a start and end time.
+*/
 const TimePicker = () => {
   const [startTime, setStartTime] = useState<string | null>(null);
   const [endTime, setEndTime] = useState<string | null>(null);

@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
-import Icon from "../Icon";
-import IconButton from "../Buttons/IconButton";
+import Icon from "../Common/Icon";
+import IconButton from "../Common/Buttons/IconButton";
 
 export const DatePickerWrapper = styled.div`
   position: relative;

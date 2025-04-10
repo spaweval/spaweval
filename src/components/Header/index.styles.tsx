@@ -1,7 +1,7 @@
 "use client";
 import styled from "styled-components";
 import Image from "next/image";
-import IconButton from "../Buttons/IconButton";
+import IconButton from "../Common/Buttons/IconButton";
 
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -10,9 +10,9 @@ export const HeaderWrapper = styled.div`
   max-width: 1440px;
   width: 100% !important;
   height: 100vh !important;
-  background-image: url("/Images/HeaderBg.svg");
+  background-image: url("/Images/Top_colors.png");
   background-size: cover;
-  background-position: 80px -180px;
+  background-position: top left;
   background-repeat: no-repeat;
   overflow: hidden;
 `;
@@ -52,6 +52,12 @@ export const SearchContainer = styled.section`
   flex-wrap: wrap;
   max-width: 1062px;
   padding: 41px 0 177px;
+
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.md}) and (max-width: ${({ theme }) =>
+      theme.breakpoints.xl}) {
+    max-width: 700px;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -59,7 +65,13 @@ export const TitleContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   margin: 24px 0 119px;
+
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.md}) and (max-width: ${({ theme }) =>
+      theme.breakpoints.xl}) {
+    margin: 24px 0 80px;}
 `;
+
 export const Title = styled.h1`
   display: flex;
   min-width: max-content;
@@ -71,6 +83,13 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.secondary};
   text-align: center;
   margin: 0;
+
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.md}) and (max-width: ${({ theme }) =>
+      theme.breakpoints.xl}) {
+    font-size: 54px;
+    line-height: 60px;
+  }
 `;
 
 export const SubTitle = styled.p`
@@ -88,18 +107,24 @@ export const SubTitle = styled.p`
 `;
 
 export const GettheApp = styled(IconButton)`
- display: flex;
- align-items: center;
- justify-content: center;
- width: max-content;
- background-color: ${({ theme }) => theme.colors.contrastBg};
- color: ${({ theme }) => theme.colors.textSecondary};
- border-radius: 40px;
- padding: 17px 30px;
- margin: 119px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  background-color: ${({ theme }) => theme.colors.contrastBg};
+  color: ${({ theme }) => theme.colors.textSecondary};
+  border-radius: 40px;
+  padding: 17px 30px;
+  margin: 119px 0 0;
 
- &:hover {
-  background-color: ${({ theme }) => theme.colors.primary};
-  border: 1px solid ${({ theme }) => theme.colors.secondary};
- }
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.secondary};
+  }
+
+  @media (min-width: ${({ theme }) =>
+      theme.breakpoints.md}) and (max-width: ${({ theme }) =>
+      theme.breakpoints.xl}) {
+     margin: 80px 0 0;
+     }
 `;

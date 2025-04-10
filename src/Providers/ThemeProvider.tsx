@@ -4,7 +4,12 @@ import { ThemeProvider as StyledProvider } from "styled-components";
 
 import { lightTheme, darkTheme } from "@/styles/theme";
 
-export default function ThemeProvider({ children }: { children: ReactNode }) {
+/*
+  * ThemeProvider component
+  * @param {ReactNode} children - The children components to be wrapped by the provider.
+  * @returns {JSX.Element} - A theme provider component that wraps its children with a styled-components theme provider.
+*/
+const ThemeProvider = ({ children }: { children: ReactNode })  =>{
   const [isDark, setIsDark] = useState(false);
 
   const toggleTheme = () => setIsDark(!isDark);
@@ -19,3 +24,5 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     </StyledProvider>
   );
 }
+
+export default ThemeProvider;

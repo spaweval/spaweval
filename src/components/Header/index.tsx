@@ -1,8 +1,8 @@
 import Icons from "../../Icons";
-import SecondaryButton from "../Buttons/OutlinedButton";
-import Icon from "../Icon";
+import SecondaryButton from "../Common/Buttons/OutlinedButton";
+import Icon from "../Common/Icon";
 import Search from "../Search";
-import StyledSelect from "../Select";
+import StyledSelect from "../Common/Select";
 
 //css
 import {
@@ -16,6 +16,10 @@ import {
   TitleContainer,
 } from "./index.styles";
 
+/*
+  * StyledHeader component
+  * @returns {JSX.Element} - A styled header component with a logo, buttons, and a search bar.
+*/
 const StyledHeader = () => {
   return (
     <HeaderWrapper>

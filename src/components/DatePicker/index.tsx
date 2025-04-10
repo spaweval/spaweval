@@ -8,6 +8,10 @@ import Icons from "@/Icons";
 import "react-day-picker/style.css";
 import { CloseBtn, DatePickerWrapper, Modal, PickDateBtn } from "./index.styles";
 
+/*
+  * DatePicker component
+  * @returns {JSX.Element} - A date picker component that allows users to select a date.
+*/
 const DatePicker = () => {
   const [open, setOpen] = useState<boolean>(false);
   const [selected, setSelected] = useState<Date>(new Date());
